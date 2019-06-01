@@ -1,0 +1,33 @@
+li.StudentItem{
+	text-align: left;
+	border: 1px solid #000;
+	margin: 2px;
+}
+
+.StudentItem div{
+	display: inline-block;
+	text-align: left;
+}
+
+.StudentItem-id{
+	padding: 10px;
+}
+.StudentItem-remove {
+	float: right;
+}
+.StudentItem-remove button{
+	display: block;
+	background: darkred;
+	padding: 10px;
+	color: white;
+	border: 0;
+	cursor: pointer;
+	transition: background .1s ease-out;
+	/*margin: 5px;*/
+}
+
+/*.StudentItem-remove button:hover{
+	cursor: pointer;
+	background: red;
+	margin: 5px;
+}*/

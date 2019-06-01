@@ -1,0 +1,12 @@
+.addStudent-btn {
+	text-decoration: none;
+	color: orange;
+	padding: 10px;
+	border: 1px solid orange;
+	background: transparent;
+	transition: background .1s linear;
+}
+.addStudent-btn:hover {
+	background: orange;
+	color: #000;
+}

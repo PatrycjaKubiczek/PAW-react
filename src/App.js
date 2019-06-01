@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+// import logo from './logo.svg';
+
+import LandingPage from './LandingPage';
+import Contact from './Contact';
+import Students from './Students';
+import NotFound from './NotFound';
+import Header from './Header';
+import AddStudent from './AddStudent';
+import Navbar from './Navbar';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+	<div className="App">
+		<Header className="App-header">
+			<p>
+				Welcome to PAW AGH
+			</p>
+		 </Header>
+		<Router>
+			{/*<> //czyli React fragement - skrotowy zapis dla <React.Fragment>*/}
+				<Navbar />
+				<Switch>
+					<Route exact path="/" component={LandingPage} />
+					<Route exact path="/students" component={Students} />
+					<Route exact path="/contact" component={Contact} />
+					<Route exact path="/add-student" component={AddStudent} />
+					<Route path="*" component={NotFound} />
+				</Switch>
+			{/*</>*/}
+		</Router>
+		
+	</div>
   );
 }
 

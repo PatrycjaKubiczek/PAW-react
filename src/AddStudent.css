@@ -1,0 +1,12 @@
+.AddStudent-form{
+	display: flex;
+	justify-content: center;
+}
+.AddStudent-input {
+	padding: 10px;
+	margin: 0;
+}
+.AddStudent-submit {
+	padding: 10px;
+	border: 0;
+}
